@@ -49,8 +49,8 @@
    */
 
   /* font-family */
-  --fontFamily-forum: 'Forum', cursive;
-  --fontFamily-dm_sans: 'DM Sans', sans-serif;
+  --fontFamily-forum: 'Forum', 'Noto Serif JP', serif;
+  --fontFamily-dm_sans: 'DM Sans', 'Noto Sans JP', sans-serif;
 
   /* font-size */
   --fontSize-display-1: calc(1.3rem + 6.7vw);
