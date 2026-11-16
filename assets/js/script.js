@@ -168,3 +168,16 @@ window.addEventListener("mousemove", function (event) {
   }
 
 });
+
+
+/**
+ * LANGUAGE SWITCHER
+ */
+
+const langSwitch = document.querySelector("[data-lang-switch]");
+
+if (langSwitch) {
+  document.addEventListener("click", function (event) {
+    if (!langSwitch.contains(event.target)) langSwitch.removeAttribute("open");
+  });
+}

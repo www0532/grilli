@@ -13,6 +13,15 @@
   <meta name="title" content="Grilli｜旬の食材で楽しむ本格イタリアン">
   <meta name="description" content="契約農家の有機野菜と旬の食材を使った、体にやさしい本格イタリアン。ご家族の記念日や女子会にもどうぞ。">
 
+  <!-- i18n:head -->
+  <link rel="canonical" href="https://www0532-grilli.pages.dev/">
+  <link rel="alternate" hreflang="x-default" href="https://www0532-grilli.pages.dev/">
+  <link rel="alternate" hreflang="ja" href="https://www0532-grilli.pages.dev/">
+  <link rel="alternate" hreflang="en" href="https://www0532-grilli.pages.dev/en/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://www0532-grilli.pages.dev/zh/">
+  <link rel="alternate" hreflang="ko" href="https://www0532-grilli.pages.dev/ko/">
+  <!-- /i18n:head -->
+
   <!-- 
     - favicon
   -->
@@ -29,6 +38,7 @@
     - custom css link
   -->
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/i18n.css">
 
   <!-- 
     - preload images
@@ -199,6 +209,22 @@
 
         <span class="text text-2" aria-hidden="true">ご予約</span>
       </a>
+
+      <!-- i18n:switcher -->
+      <details class="lang-switch" data-lang-switch>
+        <summary class="lang-current" aria-label="言語を選択">
+          <ion-icon name="globe-outline" aria-hidden="true"></ion-icon>
+          <span class="span">JA</span>
+          <ion-icon name="chevron-down" aria-hidden="true" class="lang-arrow"></ion-icon>
+        </summary>
+        <ul class="lang-list">
+          <li><a href="./" class="lang-link" hreflang="ja" lang="ja" aria-current="page">日本語</a></li>
+          <li><a href="./en/" class="lang-link" hreflang="en" lang="en">English</a></li>
+          <li><a href="./zh/" class="lang-link" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></li>
+          <li><a href="./ko/" class="lang-link" hreflang="ko" lang="ko">한국어</a></li>
+        </ul>
+      </details>
+      <!-- /i18n:switcher -->
 
       <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
         <span class="line line-1"></span>

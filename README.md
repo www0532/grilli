@@ -45,6 +45,21 @@ Windows:
 git clone https://github.com/codewithsadee/grilli.git
 ```
 
+### 多言語対応
+
+日本語（`/`）・英語（`/en/`）・中国語簡体字（`/zh/`）・韓国語（`/ko/`）に対応しています。
+
+- 編集するのは日本語の `index.html` のみです。`en/`・`zh/`・`ko/` の `index.html` は自動生成されるため、直接編集しないでください。
+- 翻訳は `i18n/en.json`・`i18n/zh.json`・`i18n/ko.json` に「日本語の文 → 翻訳」の形式で記載します。
+- `index.html` を変更したら、次のコマンドで各言語のページを再生成してコミットします（Node.js が必要）。
+
+```bash
+node scripts/build-i18n.js
+```
+
+- 翻訳が足りない文があるとエラーになり、不足している日本語の文が表示されます。翻訳対象の一覧は `node scripts/build-i18n.js --list` で確認できます。
+- `<!-- i18n:head -->` と `<!-- i18n:switcher -->` の間（hreflang と言語切替メニュー）もスクリプトが生成します。
+
 ### Contact
 
 If you want to contact with me you can reach me at [Twitter](https://www.twitter.com/codewithsadee).

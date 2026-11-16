@@ -1,0 +1,81 @@
+/*-----------------------------------*\
+  #I18N
+\*-----------------------------------*/
+
+/* Fall back to Noto fonts for CJK glyphs that Forum and DM Sans do not include */
+
+html:lang(zh) {
+  --fontFamily-forum: 'Forum', 'Noto Serif SC', serif;
+  --fontFamily-dm_sans: 'DM Sans', 'Noto Sans SC', sans-serif;
+}
+
+html:lang(ko) {
+  --fontFamily-forum: 'Forum', 'Noto Serif KR', serif;
+  --fontFamily-dm_sans: 'DM Sans', 'Noto Sans KR', sans-serif;
+}
+
+html:lang(ko) body { word-break: keep-all; }
+
+/* Language switcher */
+
+.lang-switch {
+  position: relative;
+  margin-inline-start: auto;
+  color: var(--white);
+}
+
+.lang-current {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-block: 10px;
+  font-size: var(--fontSize-label-2);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--letterSpacing-1);
+  cursor: pointer;
+  list-style: none;
+  transition: var(--transition-1);
+}
+
+.lang-current::-webkit-details-marker { display: none; }
+
+.lang-current:is(:hover, :focus-visible),
+.lang-switch[open] .lang-current { color: var(--gold-crayola); }
+
+.lang-current ion-icon { font-size: 1.8rem; }
+
+.lang-current .lang-arrow {
+  font-size: 1.2rem;
+  transition: var(--transition-1);
+}
+
+.lang-switch[open] .lang-arrow { transform: rotate(180deg); }
+
+.lang-list {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  min-width: 140px;
+  padding: 10px 20px;
+  background-color: var(--smoky-black-1);
+  border: 1px solid var(--white-alpha-20);
+  z-index: 5;
+}
+
+.lang-link {
+  display: block;
+  padding-block: 8px;
+  color: var(--quick-silver);
+  font-size: var(--fontSize-label-1);
+  white-space: nowrap;
+  transition: var(--transition-1);
+}
+
+.lang-link:is(:hover, :focus-visible),
+.lang-link[aria-current="page"] { color: var(--gold-crayola); }
+
+@media (min-width: 575px) {
+
+  .lang-switch { margin-inline-start: 0; }
+
+}
